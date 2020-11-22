@@ -31,7 +31,7 @@ class Example extends Component {
   }
 }
 ```
-
+![alt text](https://i.ibb.co/d7MVJJy/ezgif-com-gif-maker-1.gif)
 
 
 ## Available props
