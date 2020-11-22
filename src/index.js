@@ -29,7 +29,7 @@ export default class ParallaxCard extends React.Component {
       ? this.props.children.length
         ? this.props.children
         : [this.props.children]
-      : [React.createElement('div', [], [])],
+      : [React.createElement('div', { style: this.props.style }, [])],
     layersTransform: []
   }
 
@@ -56,16 +56,17 @@ export default class ParallaxCard extends React.Component {
       document.getElementsByTagName('html')[0].scrollTop
     const bodyScrollLeft = document.body.scrollLeft
     const offsets = this.node.getBoundingClientRect()
-    const wMultiple = (320 / rootElemWidth) * 0.07
+    const wMultiple = 320 / rootElemWidth
+    const multiple = wMultiple * 0.07
     const offsetX =
       0.52 - (pageX - offsets.left - bodyScrollLeft) / rootElemWidth
     const offsetY =
       0.52 - (pageY - offsets.top - bodyScrollTop) / rootElemHeight
     const dy = pageY - offsets.top - bodyScrollTop - rootElemHeight / 2
     const dx = pageX - offsets.left - bodyScrollLeft - rootElemWidth / 2
-    const yRotate = (offsetX - dx) * wMultiple
+    const yRotate = (offsetX - dx) * multiple
     const xRotate =
-      (dy - offsetY) * (Math.min(offsets.width / offsets.height, 1) * wMultiple)
+      (dy - offsetY) * (Math.min(offsets.width / offsets.height, 1) * multiple)
     const arad = Math.atan2(dy, dx)
     const rawAngle = (arad * 180) / Math.PI - 90
     const angle = rawAngle < 0 ? rawAngle + 360 : rawAngle
@@ -88,9 +89,9 @@ export default class ParallaxCard extends React.Component {
       layersTransform: this.state.layers
         ? this.state.layers.map((_, idx) => ({
             transform: `translateX(${
-              offsetX * (layerCount - idx) * ((idx * 2.5) / wMultiple)
+              offsetX * layerCount * ((idx * 1) / wMultiple)
             }px) translateY(${
-              offsetY * layerCount * ((idx * 2.5) / wMultiple)
+              offsetY * layerCount * ((idx * 1) / wMultiple)
             }px)`
           }))
         : this.props.children
@@ -126,7 +127,8 @@ export default class ParallaxCard extends React.Component {
           overflow: 'hidden',
           transformStyle: 'preserve-3d',
           backgroundColor: this.props.backgroundColor,
-          zIndex: '2'
+          zIndex: '2',
+          ...this.props.style
         }}
       >
         {this.state.layersTransform &&
@@ -157,8 +159,7 @@ export default class ParallaxCard extends React.Component {
             WebkitTapHighlightColor: 'rgba(#000, 0)',
             cursor: this.props.cursorPointer ? 'pointer' : false,
             transform: `perspective(${this.state.rootElemWidth * 3}px)`,
-            zIndex: this.state.isOnHover ? '9' : 'unset',
-            ...this.props.style
+            zIndex: this.state.isOnHover ? '9' : 'unset'
           }}
           onMouseMove={this.handleMove}
           onMouseEnter={this.handleEnter}
