@@ -4,8 +4,8 @@
 
 Each component that is a child to the Card component will be animated in 3d, the top one being flush with the card and each subsequent one higher than the one on top of it
 
-[Code](https://github.com/jamipuchi/animated-3d-card/blob/master/example/src/App.js)
-[Demo](https://jamipuchi.github.io/animated-3d-card/)
+[Code](https://github.com/jamipuchi/react-animated-3d-card/blob/master/example/src/App.js)
+[Demo](https://jamipuchi.github.io/react-animated-3d-card/)
 
 ![Credit card](https://raw.githubusercontent.com/jamipuchi/animated-3d-card/master/example/images/cc.gif)
 
