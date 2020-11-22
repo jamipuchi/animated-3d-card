@@ -7,7 +7,6 @@ export default class ParallaxCard extends React.Component {
     isStatic: PropTypes.bool,
     borderRadius: PropTypes.string,
     shineStrength: PropTypes.number,
-    backgroundColor: PropTypes.string,
     cursorPointer: PropTypes.bool
   }
 
@@ -15,7 +14,6 @@ export default class ParallaxCard extends React.Component {
     isStatic: false,
     borderRadius: '20px',
     shineStrength: 0.4,
-    backgroundColor: 'white',
     cursorPointer: true
   }
 
@@ -126,7 +124,7 @@ export default class ParallaxCard extends React.Component {
           borderRadius: this.props.borderRadius,
           overflow: 'hidden',
           transformStyle: 'preserve-3d',
-          backgroundColor: this.props.backgroundColor,
+          backgroundColor: 'white',
           zIndex: '2',
           ...this.props.style
         }}

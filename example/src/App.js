@@ -9,7 +9,8 @@ const CreditCard = () => {
       style={{
         background: 'linear-gradient(to right, #0f0c29, #302b63, #24243e)',
         width: '450px',
-        height: '300px'
+        height: '300px',
+        cursor: 'pointer'
       }}
       onClick={() => console.log('Hola')}
     >
@@ -110,6 +111,7 @@ const CreditCard = () => {
           10/22
         </label>
       </div>
+    
     </Card>
   )
 }
