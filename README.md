@@ -2,6 +2,8 @@
 
 > Animated 3d card that reacts to the user&#x27;s mouse pointer
 
+Each component that is a child to the Card component will be animated in 3d, the top one being flush with the card and each subsequent one higher than the one on top of it
+
 ![Credit card](https://raw.githubusercontent.com/jamipuchi/animated-3d-card/master/example/images/cc.gif)
 
 [![NPM](https://img.shields.io/npm/v/animated-3d-card.svg)](https://www.npmjs.com/package/animated-3d-card) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
