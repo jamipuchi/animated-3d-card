@@ -42,6 +42,11 @@ class Example extends Component {
 | shineStrength | Number        | 0.4              | The strength of the shine from 0 to 1 |
 | cursorPointer | Boolean       | true               | Whether the cursor is a pointer or not |
 
+## Example
+
+[Code](https://github.com/jamipuchi/animated-3d-card/blob/master/example/src/App.js)
+
+[Link](https://jamipuchi.github.io/animated-3d-card/)
 
 ## License
 
