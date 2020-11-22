@@ -38,6 +38,7 @@ class Example extends Component {
 | Props         | Type          | Default value | Explanation   |
 | ------------- | ------------- | ------------- | ------------- |
 | style         | Object        | {}            | The style that will be applied to the card |
+| onClick       | Function      | -            | The function that will run when the card is clicked |
 | borderRadius  | String        | '20px'        | The radius of the card |
 | isStatic      | Boolean       | false         | Whether the card is transformed in 3d or not |
 | shineStrength | Number        | 0.4           | The strength of the shine from 0 to 1 |
