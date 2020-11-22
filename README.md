@@ -2,6 +2,8 @@
 
 > Animated 3d card that reacts to the user&#x27;s mouse pointer
 
+![Credit card](https://raw.githubusercontent.com/jamipuchi/animated-3d-card/master/example/images/cc.gif)
+
 [![NPM](https://img.shields.io/npm/v/animated-3d-card.svg)](https://www.npmjs.com/package/animated-3d-card) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
@@ -22,17 +24,16 @@ class Example extends Component {
   render() {
     return <Card       
       style={{
-        background: 'linear-gradient(to right, #0f0c29, #302b63, #24243e)',
+        backgroundColor: 'red',
         width: '450px',
         height: '300px',
         cursor: 'pointer'
       }}
-      onClick={() => console.log('Card clicked')}/>
+      onClick={() => console.log('Card clicked')}
+    />
   }
 }
 ```
-![alt text](https://i.ibb.co/d7MVJJy/ezgif-com-gif-maker-1.gif)
-
 
 ## Available props
 | Props         | Type          | Default value | Explanation   |
