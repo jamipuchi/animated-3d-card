@@ -1,4 +1,4 @@
-# animated-3d-card
+# react-animated-3d-card
 
 > Animated 3d card that reacts to the user&#x27;s mouse pointer
 
@@ -14,7 +14,7 @@ Each component that is a child to the Card component will be animated in 3d, the
 ## Install
 
 ```bash
-npm install --save animated-3d-card
+npm install --save react-animated-3d-card
 ```
 
 ## Usage
@@ -22,8 +22,7 @@ npm install --save animated-3d-card
 ```jsx
 import React, { Component } from 'react'
 
-import Card from 'animated-3d-card'
-import 'animated-3d-card/dist/index.css'
+import Card from 'react-animated-3d-card'
 
 class Example extends Component {
   render() {
