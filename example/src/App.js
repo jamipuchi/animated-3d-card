@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Card from 'animated-3d-card'
-import 'animated-3d-card/dist/index.css'
+import Card from 'react-animated-3d-card'
 
 const CreditCard = () => {
   return (
